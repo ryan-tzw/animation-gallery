@@ -1,0 +1,46 @@
+@layer utilities {
+    @-webkit-keyframes ripple-out {
+        100% {
+            top: -12px;
+            right: -12px;
+            bottom: -12px;
+            left: -12px;
+            opacity: 0;
+        }
+    }
+    @keyframes ripple-out {
+        100% {
+            top: -12px;
+            right: -12px;
+            bottom: -12px;
+            left: -12px;
+            opacity: 0;
+        }
+    }
+    .ripple-out {
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        position: relative;
+        border-radius: 999px;
+    }
+    .ripple-out:before {
+        content: '';
+        position: absolute;
+        border: theme(--color-blue-400) solid 6px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        -webkit-animation-duration: 0.7s;
+        animation-duration: 0.7s;
+        border-radius: 999px;
+    }
+
+    .ripple-out.ripple-active:before {
+        -webkit-animation-name: ripple-out;
+        animation-name: ripple-out;
+    }
+}
