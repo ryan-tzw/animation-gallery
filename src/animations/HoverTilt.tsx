@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import { motion, useMotionTemplate, useMotionValue, useSpring } from 'framer-motion'
-import { FiMousePointer, FiSmile } from 'react-icons/fi'
+import { FiSmile } from 'react-icons/fi'
 
 export const Example = () => {
     return <TiltCard />
